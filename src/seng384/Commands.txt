@@ -1,0 +1,4 @@
+ADD_WISH1 W001 "Toy Car" "A small red toy car"
+ADD_WISH2 W002 "Birthday Party" "A fun birthday party with friends" "2025-05-01" "10:00" "13:00"
+TASK_DONE T001
+LIST_ALL_TASKS D
