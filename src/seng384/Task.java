@@ -52,7 +52,7 @@ public class Task {
         return points;
     }
 
-    @Override
+ 
     public String toString() {
         return "Task ID: " + id + "\nTitle: " + title + "\nDescription: " + description +
                "\nAssigned by: " + assignedBy + "\nDeadline: " + deadlineDate + " " + deadlineTime +

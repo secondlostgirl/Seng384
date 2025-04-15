@@ -55,10 +55,12 @@ public class TaskManager {
     }
 
     // Main method to start the application
+ // Main method to start the application
     public static void main(String[] args) {
         TaskManager taskManager = new TaskManager();
-        taskManager.loadTasksFromFile("Tasks.txt"); // Dosya yolunu uygun şekilde değiştirebilirsiniz.
+        taskManager.loadTasksFromFile("src/seng384/Tasks.txt"); // Doğru dizin burası
         taskManager.listAllTasks(); // Tüm görevleri listele
         // Diğer komutları buraya ekleyebilirsiniz
     }
+
 }

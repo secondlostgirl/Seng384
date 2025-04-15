@@ -8,7 +8,7 @@ public class Wish {
     private String title;
     private String description;
     private String status; // "PENDING", "APPROVED", "REJECTED"
-    private String type; // "WISH1" for product, "WISH2" for activity
+    private String type;   // "WISH1" for product, "WISH2" for activity
     private LocalDate activityDate;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -20,8 +20,8 @@ public class Wish {
         this.title = title;
         this.description = description;
         this.status = "PENDING";
-        this.type = "WISH1"; // Default type is product
-        this.levelRequired = 0; // Default level
+        this.type = "WISH1";
+        this.levelRequired = 0;
     }
 
     // Constructor for activity wish (WISH2)
@@ -34,7 +34,7 @@ public class Wish {
         this.activityDate = activityDate;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.levelRequired = 0; // Default level
+        this.levelRequired = 0;
     }
 
     // Getter & Setter methods
@@ -58,15 +58,19 @@ public class Wish {
         return levelRequired;
     }
 
-    @Override
+  
     public String toString() {
-        String wishDetails = wishId + " - " + title + ": " + description +
-                "\nType: " + type +
-                "\nStatus: " + status;
+        StringBuilder sb = new StringBuilder();
+        sb.append(wishId).append(" - ").append(title).append(": ").append(description).append("\n");
+        sb.append("Type: ").append(type).append("\n");
+        sb.append("Status: ").append(status).append("\n");
+
         if (type.equals("WISH2")) {
-            wishDetails += "\nActivity Date: " + activityDate + " " + startTime + " to " + endTime;
+            sb.append("Activity Date: ").append(activityDate).append(" ")
+              .append(startTime).append(" to ").append(endTime).append("\n");
         }
-        wishDetails += "\nLevel Required: " + levelRequired;
-        return wishDetails;
+
+        sb.append("Level Required: ").append(levelRequired);
+        return sb.toString();
     }
 }

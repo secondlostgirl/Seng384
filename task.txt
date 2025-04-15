@@ -1,3 +1,0 @@
-Görev 1: Java öğren
-Görev 2: Ödev yap
-Görev 3: Kitap oku
